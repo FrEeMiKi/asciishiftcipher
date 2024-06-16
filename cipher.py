@@ -1,4 +1,5 @@
-from sys import argv, stdout
+from sys import argv
+
 
 def encrypt(text, s):
     result = ""
@@ -21,13 +22,10 @@ def __main__():
     encrypted = encrypt(text, s)
     encrypted_ord = [ord(c) for c in encrypted]
 
-
-    stdout.reconfigure(encoding='utf-8')
     print("Text  : " + "\"" + text + "\"")
     print("Shift : " + str(s))
     print("Cipher (ASCII): " + "\"" +  str(encrypted_ord) + "\"")
     print("Cipher (text): " + "\"" +  encrypted + "\"")
-    stdout.flush()
         
 if __name__ == "__main__":
     __main__()
